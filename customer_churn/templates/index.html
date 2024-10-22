@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Churn Prediction</title>
+    </head>
+    <body>
+        <h1>Churn Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="Age">Age:</label>
+            <input type="text" id="Age" name="Age" required>
+
+            <label for="Tenure">Tenure:</label>
+            <input type="text" id="Tenure" name="Tenure" required>
+
+            <label for="Gender">Gender:</label>
+            <select id="Gender" name="Gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <label for="MonthlyCharges">Monthly Charges:</label>
+            <input type="text" id="MonthlyCharges" name="MonthlyCharges"
+                required>
+
+            <label for="SubscriptionType">Subscription Type:</label>
+            <select id="SubscriptionType" name="SubscriptionType">
+                <option value="0">Basic</option>
+                <option value="1">Premium</option>
+            </select>
+
+            <label for="ContractLength">Contract Length:</label>
+            <select id="ContractLength" name="ContractLength">
+                <option value="0">Short</option>
+                <option value="1">Long</option>
+            </select>
+
+            <!-- Optional Model Type Selector -->
+            <label for="ModelType">Model Type:</label>
+            <select id="ModelType" name="ModelType">
+                <option value="rf">Random Forest</option>
+                <option value="logreg">Logistic Regression</option>
+            </select>
+
+            <input type="submit" value="Predict">
+        </form>
+    </body>
+</html>
